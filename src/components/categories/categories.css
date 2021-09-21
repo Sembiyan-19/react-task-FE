@@ -1,0 +1,95 @@
+.important-checked {
+  color: blue;
+}
+
+.hide-add-button {
+  display: none;
+}
+
+.display-add-button {
+  display: inline-block;
+}
+
+.category-container {
+  padding-top: 70px;
+  position: relative;
+  vertical-align: top;
+  margin: 0;
+  width: 21.2%;
+  height: 540px;
+  background-color: #F4F4F4;
+  border: none;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+.category-container .category-list-container {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 13px;
+  color: #34373D;
+  width: 100%;
+}
+.category-container .category-list-container .current-element {
+  background-color: #EDEDED !important;
+  font-weight: bold;
+  color: blue;
+}
+.category-container .category-list-container .list-element {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+.category-container .category-list-container .list-element .category-content {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  width: 70%;
+}
+.category-container .category-list-container .list-element:hover {
+  background-color: white;
+  cursor: pointer;
+}
+.category-container .category-list-container .fa-sun, .category-container .category-list-container .fa-star, .category-container .category-list-container .fa-calendar-alt, .category-container .category-list-container .fa-user, .category-container .category-list-container .fa-home, .category-container .category-list-container .fa-list-ul {
+  padding-left: 16px;
+  width: 15%;
+}
+.category-container .bottom-icons-container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #2e3033;
+}
+.category-container .bottom-icons-container .bottom-icon {
+  padding: 18px 6% 18px 6%;
+  font-size: 17px;
+}
+.category-container .category-input-container:hover {
+  background-color: white !important;
+}
+.category-container .category-input-container .fa-plus {
+  padding: 8px 13px 8px 16px;
+  color: blue;
+}
+.category-container .category-input-container ::-moz-placeholder {
+  color: blue;
+}
+.category-container .category-input-container :-ms-input-placeholder {
+  color: blue;
+}
+.category-container .category-input-container ::placeholder {
+  color: blue;
+}
+.category-container .category-input-container .category-input {
+  border: none;
+  background-color: #F4F4F4;
+  padding-top: 13px;
+  padding-bottom: 12px;
+}
+.category-container .category-input-container .category-input:hover {
+  background-color: white;
+}
+.category-container .category-input-container input:focus, .category-container .category-input-container textarea:focus, .category-container .category-input-container select:focus {
+  outline: none;
+}/*# sourceMappingURL=categories.css.map */

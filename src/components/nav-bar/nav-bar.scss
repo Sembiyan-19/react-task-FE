@@ -1,0 +1,48 @@
+.top-bar {
+    width: 100%;
+    color: white;
+    background-color: blue;
+    height: 48px;
+    .fa-bars {
+        margin-right: 20px; 
+        vertical-align: top;
+        margin: 16px 17px 16px 12px;
+        font-size: 17px;
+    }
+    .to-do-text {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 17px 25% 17px 0;
+        width: 3%;
+    }
+    .search-box {
+        width: 29%;
+        height: 32px;
+        background-color: #C3DDF7;
+        display: inline-block;
+        margin-top: 8px;
+        margin-right: 24%;
+        border-radius: 2px;
+        .fa-search {
+            margin-top: 8px;
+            margin-left: 8px;
+            color: blue;
+        }
+        &:hover {
+            background-color: white;
+            cursor: pointer;
+        }
+    }
+    .fa-cog, .fa-question, .fa-comment-alt {
+        vertical-align: top;
+        font-size: 17px;
+        margin: 16px 1.2% 0 1.2%;
+    }
+    .fa-user-circle {
+        vertical-align: top;
+        font-size: 30px;
+        margin-top: 8px;
+    }
+}

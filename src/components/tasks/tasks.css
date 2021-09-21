@@ -1,0 +1,102 @@
+.full-width {
+  width: 75%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.tasks-container {
+  display: inline-block;
+  padding: 25px 20px 0px 25px;
+  vertical-align: top;
+  margin: 0;
+  background-color: white;
+}
+.tasks-container .fa-circle {
+  color: blue;
+  padding-right: 17px;
+  font-size: 18px;
+}
+.tasks-container .tasks-list-container {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #34373D;
+}
+.tasks-container .tasks-list-container .task-element {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: none;
+  box-shadow: 0px 1px #e8e3e3;
+  font-size: 14px;
+}
+.tasks-container .tasks-list-container .task-element:hover {
+  background-color: #F4F4F4;
+  cursor: pointer;
+}
+.tasks-container .tasks-list-container .task-element .task-content {
+  width: 88%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 20px;
+}
+.tasks-container .tasks-list-container .task-element .fa-star {
+  font-size: 13px;
+  margin-right: 5px;
+  display: inline-block;
+}
+.tasks-container .tasks-list-container .task-element .fa-check-circle {
+  color: blue;
+  padding-right: 17px;
+  font-size: 18px;
+}
+.tasks-container .tasks-list-container .empty-element {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  border: none;
+  box-shadow: 0px 1px #e8e3e3;
+}
+.tasks-container .category-name {
+  color: blue;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.tasks-container .task-input-container {
+  box-shadow: 0px 1px #e8e3e3;
+  padding: 0;
+  color: blue;
+}
+.tasks-container .task-input-container .fa-plus {
+  padding: 17px 17px 17px 0;
+}
+.tasks-container .task-input-container ::-moz-placeholder {
+  color: blue;
+}
+.tasks-container .task-input-container :-ms-input-placeholder {
+  color: blue;
+}
+.tasks-container .task-input-container ::placeholder {
+  color: blue;
+}
+.tasks-container .task-input-container .task-input {
+  color: #34373D;
+  border: none;
+  font-size: 14px;
+  margin: 0;
+  padding: 17px 0 17px 0;
+  width: 89%;
+}
+.tasks-container .task-input-container input:focus, .tasks-container .task-input-container textarea:focus, .tasks-container .task-input-container select:focus {
+  outline: none;
+}
+.tasks-container .task-input-container .add-task-button {
+  color: blue;
+  font-size: 14px;
+  margin-bottom: 17px;
+}
+.tasks-container .task-input-container .add-task-button:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=tasks.css.map */

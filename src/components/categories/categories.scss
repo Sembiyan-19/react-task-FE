@@ -1,0 +1,88 @@
+.important-checked {
+    color: blue
+}
+.hide-add-button {
+    display: none;
+}
+.display-add-button {
+    display: inline-block;
+}
+.category-container {
+    padding-top: 70px;
+    position: relative;
+    vertical-align: top;
+    margin: 0;
+    width: 21.2%;
+    height: 540px;
+    background-color: #F4F4F4;
+    border: none;
+    letter-spacing: 1px;
+    display: inline-block;
+    .category-list-container {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0;
+        font-size: 13px;
+        color: #34373D;
+        width: 100%;
+        .current-element {
+            background-color: #EDEDED !important;
+            font-weight: bold;
+            color: blue;
+        }
+        .list-element {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+            .category-content {
+                display: inline-block;
+                vertical-align: top;
+                overflow: hidden;
+                width: 70%;
+            }
+            &:hover {
+                background-color: white;
+                cursor: pointer;
+            }
+        }
+        .fa-sun, .fa-star, .fa-calendar-alt, .fa-user, .fa-home, .fa-list-ul {
+            padding-left: 16px;
+            width: 15%;
+        }
+    }
+    .bottom-icons-container {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        color: #2e3033;
+        .bottom-icon {
+            padding: 18px 6% 18px 6%;
+            font-size: 17px;
+        }
+    }
+    .category-input-container {
+        &:hover {
+            background-color: white !important;
+        }
+        .fa-plus {
+            padding: 8px 13px 8px 16px;
+            color: blue;
+        }
+        ::placeholder {
+            color: blue;
+        }
+        .category-input {
+            border: none;
+            background-color: #F4F4F4;
+            padding-top: 13px;
+            padding-bottom: 12px;
+            &:hover {
+                background-color: white;
+            }
+        }
+        input:focus, textarea:focus, select:focus{
+            outline: none;
+        }
+    }
+}
