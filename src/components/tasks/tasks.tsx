@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './tasks.css';
-import axios from 'axios';
 
 class tasks extends React.Component<{}, {tasks: any, isLoaded: boolean}> {
 
@@ -10,17 +9,6 @@ class tasks extends React.Component<{}, {tasks: any, isLoaded: boolean}> {
     this.state = {
       tasks: [],
       isLoaded: false
-    }
-  }
-
-  async componentDidUpdate() {
-    let properties: any = this.props;
-    if(properties.isTasksChanged) {
-      await axios.get('http://localhost:8003/categories/' + properties.currentCategory._id)
-      .then(res => res.data)
-      .then(json => {
-        properties.setCurrentCategory(json)
-      })
     }
   }
 
@@ -40,10 +28,10 @@ class tasks extends React.Component<{}, {tasks: any, isLoaded: boolean}> {
             return(
               <li className="task-element" >
                 <i className={item.isCompleted ? "fas fa-check-circle" : "far fa-circle"}
-                onClick={() => properties.toggleCompleted(item)}></i>
+                onClick={() => properties.toggleCompleted(item, currentCategory._id, isFullwidth)}></i>
                 <div className="task-content" onClick={() => properties.setCurrentTask(item)}>{item.name}</div>
                 <i className={item.isImportant ? "fas fa-star" : "far fa-star"} 
-                onClick={() => properties.toggleImportant(item)}></i>
+                onClick={() => properties.toggleImportant(item, currentCategory._id, isFullwidth)}></i>
               </li>
             )
           })
@@ -70,12 +58,6 @@ class tasks extends React.Component<{}, {tasks: any, isLoaded: boolean}> {
 
 const dispatcher = (dispatch: any) => {
     return {
-        setCurrentCategory: (categoryObject: any) => {
-          dispatch({
-            type: 'SET_CURRENT_CATEGORY',
-            value: categoryObject
-          })
-        } ,
         setCurrentTask: (taskObject: any) => {
             dispatch({
                 type: 'SET_CURRENT_TASK',
@@ -92,27 +74,29 @@ const dispatcher = (dispatch: any) => {
                 id: categoryId
             };
             event.target.value = "";
-            await axios.post("http://localhost:8003/tasks", taskObject);
             dispatch({
                 type: 'ADD_TASK',
-                value: taskObject
+                value: taskObject,
+                id: categoryId
             })
           }
         },
-        toggleCompleted: (taskObject: any) => {
+        toggleCompleted: (taskObject: any, categoryId: any, isFullwidth: Boolean) => {
           taskObject.isCompleted = !taskObject.isCompleted; 
           dispatch({
             type: 'UPDATE_TASK',
             value: taskObject,
-            isStepsChanged: false
+            id: categoryId,
+            isFullwidth: isFullwidth
           })
         },
-        toggleImportant: (taskObject: any) => {
+        toggleImportant: (taskObject: any, categoryId: any, isFullwidth: Boolean) => {
           taskObject.isImportant = !taskObject.isImportant;
           dispatch({
             type: 'UPDATE_TASK',
             value: taskObject,
-            isStepsChanged: false
+            id: categoryId,
+            isFullwidth: isFullwidth
           })
         } 
     }

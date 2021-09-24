@@ -13,16 +13,16 @@ class steps extends React.Component<{}, {tasks: any, isLoaded: boolean}> {
     }
   }
 
-  async componentDidUpdate() {
-    let properties: any = this.props;
-    if(properties.isStepsChanged) {
-      await axios.get('http://localhost:8003/tasks/' + properties.currentTask._id)
-      .then(res => res.data)
-      .then(json => {
-        properties.setCurrentTask(json)
-      })
-    }
-  }
+  // async componentDidUpdate() {
+  //   let properties: any = this.props;
+  //   if(properties.isStepsChanged) {
+  //     await axios.get('http://localhost:8003/tasks/' + properties.currentTask._id)
+  //     .then(res => res.data)
+  //     .then(json => {
+  //       properties.setCurrentTask(json)
+  //     })
+  //   }
+  // }
 
   render() {
     let properties: any = this.props;
@@ -103,18 +103,17 @@ const dispatcher = (dispatch: any) => {
           taskObject.steps.push(event.target.value)
           event.target.value = ""
           dispatch({
-              type: 'UPDATE_TASK',
-              value: taskObject,
-              isStepsChanged: true
+              type: 'UPDATE_STEP',
+              value: taskObject
           })
         }
-      },
-      setCurrentTask: (taskObject: any) => {
-        dispatch({
-          type: 'SET_CURRENT_TASK',
-          value: taskObject
-      })
       }
+      // setCurrentTask: (taskObject: any) => {
+      //   dispatch({
+      //     type: 'SET_CURRENT_TASK',
+      //     value: taskObject
+      // })
+      // }
     }
 }
 
